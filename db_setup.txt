@@ -1,0 +1,15 @@
+Use the following Commands in your psql when you log into as the superuser in postgres db
+
+CREATE DATABASE leetpy;
+CREATE USER <user> WITH ENCRYPTED PASSWORD '<pswd>'; // <user> <pswd> to be replaced with your choice in env variables
+GRANT ALL PRIVILEGES ON DATABASE leetpy TO <user>;
+ 
+use above database then then create below table
+
+CREATE TABLE leet(
+id SERIAL,
+ name TEXT,
+ rank INT,
+ PRIMARY KEY(name,rank)
+ );
+ 
